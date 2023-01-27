@@ -1,0 +1,28 @@
+.heading{
+    margin-top: 70px !important;
+    // start h2
+    h2{
+        color: var(--text-black);
+        @include mobileScreen{
+            font-size: 22px !important;
+        }
+    }
+    // start hr
+    .heading-hr{
+        height: 3px !important;
+        width: 130px;
+        background-color: var(--bg-white);
+        border: 0;
+        opacity: 1;
+        position: relative;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 100%;
+            background-color: var(--bg-black);
+        }
+    }
+}

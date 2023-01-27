@@ -1,0 +1,54 @@
+// helper folder
+@import "sass/helper/variables";
+@import "sass/helper/mixin";
+
+// components folder
+@import "sass/component/button";
+@import "sass/component/scroller-progress";
+@import "sass/component/btn-up";
+@import "sass/component/checkbox";
+@import "sass/component/dark-mood";
+
+// pages folder
+@import "sass/pages/dashboard";
+@import "sass/pages/setting";
+@import "sass/pages/profile";
+@import "sass/pages/projects";
+@import "sass/pages/courses";
+@import "sass/pages/friends";
+@import "sass/pages/files";
+@import "sass/pages/plans";
+
+// layout folder
+@import "sass/layout/side-bar";
+@import "sass/layout/content";
+@import "sass/layout/main-header";
+@import "sass/layout/head-dashboard";
+@import "sass/layout/box";
+@import "sass/layout/footer";
+
+body{
+  font-family: "Open Sans", sans-serif !important;
+}
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--bg-color) !important;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--blue-color) !important;
+}
+* {
+  transition: all .3s linear !important;
+}
+*:focus {
+  outline: none !important;
+}
+
+ul {
+  @include reset-ul;
+}
+a {
+  @include reset-a-link;
+}

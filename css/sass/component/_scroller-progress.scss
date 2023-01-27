@@ -1,0 +1,36 @@
+#progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    z-index: 1000;
+    @include mobileScreen{
+        height: 45px !important;
+        width: 45px !important;
+        left: 7px !important;
+    }
+    #progress-value{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 15px);
+        width: calc(100% - 15px);
+        background-color: var(--bg-white);
+        color: var(--text-black);
+        border-radius: 50%;
+        font-weight: 600;
+        font-size: 16px;
+        z-index: 1000;
+        @include mobileScreen{
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            font-size: 13px;
+        }
+    }
+}

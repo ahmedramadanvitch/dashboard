@@ -1,0 +1,41 @@
+.main-header{
+    height: 67px !important;
+    width: -webkit-fill-available !important;
+    background-color: var(--bg-white);
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px var(--bg-black);
+    z-index: 20;
+    .container{
+        height: 100%;
+        & > div{
+            padding-top: 12px !important;
+        }
+        .search{
+            position: relative;
+            left: -15px;
+            i{
+                position: relative;
+                left: 25px;
+                color: #a3a3a3;
+                font-size: 14px;
+            }
+            input{
+                border-radius: 8px;
+                border: 2px solid #ccc;
+                background-color: var(--bg-white);
+                color: var(--text-black);
+                padding: 8px 0px 8px 25px !important;
+                font-size: 14px;
+            }
+        }
+        .icon-img{
+            height: 35px;
+            position: relative;
+            gap: 10px;
+            color: var(--text-black);
+            img{
+                width: 32px !important;
+            }
+        }
+    }
+}

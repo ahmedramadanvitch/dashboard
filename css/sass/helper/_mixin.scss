@@ -1,0 +1,35 @@
+// mobile screen
+@mixin mobileScreen {
+    @media (min-width: 100px) and (max-width : 767px){
+        @content;
+    }
+};
+// small screen
+@mixin smallScreen {
+    @media (min-width : 768px) and (max-width : 990px){
+        @content;
+    }
+};
+// medium screen
+@mixin MediumScreen {
+    @media (min-width : 991px) and (max-width : 1190px){
+        @content;
+    }
+};
+// large screen
+@mixin largeScreen {
+    @media (min-width : 1200px){
+        @content;
+    }
+};
+// reset <ul>
+@mixin reset-ul {
+    margin: 0 !important;
+    padding: 0!important;
+    list-style: none !important;
+}
+// reset <a>
+@mixin reset-a-link {
+    color: black !important;
+    text-decoration: none !important;
+}

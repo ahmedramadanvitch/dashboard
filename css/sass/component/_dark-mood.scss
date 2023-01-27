@@ -1,0 +1,21 @@
+#toggle-mood{
+    position: fixed;
+    color: var(--text-black) !important;
+    top: 18px;
+    font-size: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.5s linear !important;
+    @include mobileScreen{
+        right: 95px;
+    }
+    @include smallScreen{
+        right: 110px;
+    }
+    @include MediumScreen{
+        right: 85px;
+    }
+    @include largeScreen{
+        right: 95px;
+    }
+}

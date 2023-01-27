@@ -1,0 +1,12 @@
+.box{
+    background-color: var(--bg-white) !important;
+    border-radius: 12px !important;
+    padding: 16px;
+    box-shadow: 0 0 5px 2px #cccccc !important;
+    h3{
+        color: var(--text-black) !important;
+    }
+    p{
+        color: var(--text-black) !important;
+    }
+}

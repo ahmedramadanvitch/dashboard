@@ -1,0 +1,71 @@
+.plans{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(450px,1fr) );
+    gap: 20px;
+    & > div{
+        background-color: var(--bg-white);
+        padding: 15px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 5px 2px #cccccc !important;
+        .title{
+            color: var(--text-white) !important;
+            border: 3px solid var(--bg-white);
+            padding: 20px;
+            border-radius: 15px;
+            h4{
+                font-size: 26px;
+            }
+            span.price{
+                font-size: 42px;
+            }
+        }
+        ul{
+            li{
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--bg-color);
+                }
+                .check-icon{
+                    i{
+                        min-width: 25px;
+                    }
+                    .fa-check{
+                        color: var(--green-color);
+                        font-size: 19px !important;    
+                    }
+                    .fa-xmark{
+                        color: var(--red-color);
+                        font-size: 19px !important;
+                    }
+                }
+                span{
+                    color: var(--text-black);
+                    font-size: 15px;
+                }
+                .fa-circle-info{
+                    background-color: white;
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px 2px white !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .free{
+        .title.green{
+            background-color: var(--green-color);
+            outline: 3px solid var(--green-color);
+        }
+    }
+    .basic{
+        .title.blue{
+            background-color: var(--blue-alt-color);
+            outline: 3px solid var(--blue-alt-color);
+        }
+    }
+    .premium{
+        .title.orange{
+            background-color: var(--orange-color);
+            outline: 3px solid var(--orange-color);
+        }
+    }
+}
