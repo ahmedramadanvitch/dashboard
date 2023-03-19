@@ -1,0 +1,110 @@
+.profile{
+    .id-profile{
+        .id-img{
+            border-right: 1px solid var(--bg-color);
+            hr{
+                height: 5px !important;
+                width: 130px;
+                background-color: var(--bg-color);
+                border: 0;
+                border-radius: 20px;
+                opacity: 1;
+                position: relative;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    height: 100%;
+                    border-radius: 15px;
+                    background-color: var(--blue-color);
+                }
+            }
+            .star-rating{
+                i{
+                    color: var(--grey-color);
+                    cursor: pointer;
+                    &.active{
+                        color: var(--blue-color);
+                    }
+                }
+            }
+            .result-rate{
+                text-align: center;
+                font-weight: 700;
+                color: var(--blue-color) !important;
+                font-size: 20px;
+                transition: all .5s linear !important;
+            }
+        }
+        
+        .id-info{
+            .info-rows{
+                width: 100%;
+                &:hover{
+                    background-color: var(--light-grey-color);
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--bg-color);
+                }
+                .information{
+                    min-width: 250px;
+                    span{
+                        &:last-child{
+                            color: var(--text-black);
+                        }
+                    }
+                }
+                .icons-checkbox{
+
+                    .toggle-switch {
+                        height: 20px;
+                        &::before {
+                            width: 14px;
+                            height: 14px;
+                            font-size: 10px;
+                            top: 3px;
+                            left: 4px;
+                        }
+                    }
+                    .toggle-checkbox:checked + .toggle-switch {
+                        background-color: var(--blue-color);
+                    }
+                    .toggle-checkbox:checked + .toggle-switch::before {
+                        left: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .two-box{
+        .skills{
+            flex-grow: 1;
+            
+            .skills-row{
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--bg-color);
+                }
+                span{
+                    background-color: var(--bg-color);
+                    color: var(--text-black);
+                }
+            }
+        }
+        .activities{
+            flex-grow: 2;
+            .activities-row{
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--bg-color);
+                }
+                .activities-img{
+                    img{
+                        width: 65px;
+                        height: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,524 @@
+// start dashboard
+.dashboard{
+    // start Boxes
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));  /* مهم مهم مهم  */
+    gap: 30px;
+    @include mobileScreen{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* مهم مهم مهم  */
+        gap: 30px;
+    }
+    // start welcome box
+    .welcome{
+        .welcome-head{
+            background-color: var(--bg-color);
+            .img{
+                width: 220px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .welcome-info{
+            border: 1px solid #EEE;
+            border-color: #EEE transparent;
+            p{
+                color: var(--text-black);
+            }
+        }
+    }
+    // End welcome box
+
+    // start draft box
+    .draft{
+        form{
+            position: relative;
+            input:first-child, textarea{
+                border-color: transparent;
+                border-radius: 8px 8px 8px 3px;
+                background-color: var(--bg-color);
+                color: var(--text-black);
+            }
+            .progress-input-draft{
+                display: block;
+                width: 0px;
+                height: 2px;
+                position: relative;
+                left: 0;
+                top: -10px;
+                border-radius: 3px ;
+            }
+            .count-input-character{
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                right: 8px;
+                top: 13px;
+                color: var(--text-black);
+            }
+            .zero{
+                font-weight: bold;
+                font-size: 18px;
+                color: red;
+            }
+        }
+    }
+    // End draft box
+
+    // start target box
+    .target{
+        .icon-prog{
+            .icon{
+                width: 90px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .prog{
+                width: 100%;
+                .progress{
+                    height: 1.5rem !important;
+                }
+            }
+        }
+    }
+    // End target box
+    
+    // start ticket box
+    .ticket{
+        .container{
+            .row{
+                gap: 15px !important;
+                @include mobileScreen{
+                    gap: 20px !important;
+                }
+            }
+            .card{
+                height: fit-content !important;
+                width: calc(50% - 10px) !important;
+                background-color: var(--bg-white) !important;
+                border-color: var(--bg-color) !important;
+                box-shadow: 0 0 4px 2px var(--bg-color) !important;
+                @include mobileScreen{
+                    width: calc(100%) !important;
+                }
+            }
+        }
+    }
+    // End ticket box
+
+    // start news box
+    .latest-news{
+        .news-row{
+            &:not(:last-child){
+                border-bottom: 1px solid gainsboro;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    // End news box
+
+    // start tasks box
+    .latest-tasks{
+        .tasks-row:not(:last-child){
+            border-bottom: 1px solid rgb(224, 224, 224);
+            padding-bottom: 10px;
+        }
+        .text-tasks{
+            p{
+                @include mobileScreen{
+                    font-size: 16px !important;   
+                }
+            }
+            span{
+                @include mobileScreen{
+                    font-size: 14px !important;   
+                }
+            }
+        }
+        .icon-tasks{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    // End tasks box
+
+    // start top-search box
+    .top-search{
+        .num-top{
+            background-color: var(--bg-color) !important;
+        }
+    }
+    // End top-search box
+    
+    // start Latest Uploads
+    .uploads{
+        .img-upload{
+            span{
+                font-size: 15px !important;
+                letter-spacing: 1px;
+            }
+        }
+        p{
+            &:last-child{
+                background-color: var(--bg-color) !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+    // End Latest Uploads
+
+    // start last project
+    .last-project{
+        position: relative;
+        color: var(--text-black) !important;
+        .big-circle-div{
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            gap: 20px;
+            @include mobileScreen{
+                gap: 20px;
+            }
+            @include smallScreen{
+                gap: 30px;
+            }
+            @include MediumScreen{
+                gap: 30px;
+            }
+            @include largeScreen{
+                gap: 40px;
+            }
+            .steps {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 20px;
+                position: relative;
+                .circ-text{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    .circle {
+                        width: 50px;
+                        height: 50px;
+                        font-weight: 700;
+                        border-radius: 50%;
+                        color: var(--text-black);
+                        border: 3px solid var(--text-black);
+                        background-color: var(--text-white);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        @include mobileScreen{
+                            width: 35px;
+                            height: 35px;
+                            border: 2px solid var(--text-black);
+                            font-size: 13px;
+                        }
+                    }
+                    .circle.active {
+                        border: 3px solid var(--red-color);
+                        color: var(--red-color);
+                        transition-delay: .3s;
+                        & + p {
+                            color: var(--red-color) !important;
+                            font-weight: 700;
+                            transition-delay: .4s;
+                        }
+                    }
+                    .text{
+                        color: var(--grey-color);
+                        @include mobileScreen{
+                            font-size: 13px !important;
+                            max-height: 35px;
+                        }
+                    }
+                }
+                .progress-bar-stp{
+                    position: absolute;
+                    left: 23px;
+                    width: 3px;
+                    height: 100%;
+                    background-color: var(--text-black);
+                    // z-index: -1;
+                    @include mobileScreen{
+                        left: 16px;
+                    }
+                    .line {
+                        position: absolute;
+                        width: 3px;
+                        height: 0px;
+                        background-color: var(--red-color);
+                        transition: all .3s linear;
+                    }
+                }
+            }
+            .button {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                @include mobileScreen{
+                    flex-direction: row;
+                }
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border: none;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    color: white;
+                    font-size: 18px;
+                    background-color: var(--red-color);
+                    transition: all 0.3s linear;
+                    cursor: pointer;
+                    @include mobileScreen{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    &:active{
+                        transform: scale(.9);
+                        transition: all .3s linear;
+                    }
+                    &:disabled{
+                        background-color: #c9343461;
+                        cursor: not-allowed;
+                    }
+                    i{
+                        font-size: 30px;
+                        @include mobileScreen{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        img{
+            width: 160px;
+            height: 160px;
+            right: 20px;
+            bottom: 15px;
+            opacity: 0.3;
+        }
+    }
+    // End last project
+
+    // start Reminders
+    .reminders{
+        .reminders-row{
+            div{
+                position: relative;
+                padding-left: 50px;
+                &::before , ::after{
+                    content: "";
+                    position: absolute;
+                }
+                &::before{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 15px;
+                }
+                &::after{
+                    width: 2px;
+                    height: 100%;
+                    left: 35px;
+                    top: 0;
+                }
+                p:last-child{
+                    font-size: 14px !important;
+                }
+            }
+            .blue{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: var(--blue-color);
+                    border-radius: 50%;
+                    left: 0;
+                    top: 15px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    background-color: var(--blue-color);
+                    left: 35px;
+                    top: 0;
+                }
+            }
+            .orange{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 15px;
+                    background-color: var(--orange-color);
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    left: 35px;
+                    top: 0;
+                    background-color: var(--orange-color);
+                }
+            }
+            .green{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 15px;
+                    background-color: var(--green-color);
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    left: 35px;
+                    top: 0;
+                    background-color: var(--green-color);
+                }
+            }
+            .red{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 15px;
+                    background-color: var(--red-color);
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    left: 35px;
+                    top: 0;
+                    background-color: var(--red-color);
+                }
+            }
+        }
+
+    }
+    // End Reminders
+
+    // start Latest Post
+    .latest-post{
+        .post-text{
+            border-top: 1px solid gainsboro;
+            border-bottom: 1px solid gainsboro;
+            p{
+                font-size: 18px !important;
+            }
+        }
+    }
+    // End Latest Post
+
+    // start social-media
+    .social{
+        .twitter{
+            background-color: #1da1f233 !important;
+        }
+        .face-book{
+            background-color: #166cdd6c !important;
+        }
+        .youtube{
+            background-color: #f23d1d33 !important;
+        }
+        .linked-in{
+            background-color: #1da0f26b !important;
+        }
+        .icon{
+            i{
+                width: 60px;
+                height: 60px;
+                color: var(--text-white) !important;
+                &:hover{
+                    transform: rotate(5deg);
+                }
+            }
+            @include mobileScreen{
+                span{
+                    font-size: 14px !important;
+                }
+            }
+        }
+        a{
+            color: var(--text-white) !important;
+            @include mobileScreen{
+                font-size: 12px !important;
+                padding: 3px 5px !important;
+            }
+        }
+    }
+    // End social-media
+}
+// End dashboard
+
+// start gallery
+.gallery-images{
+    .gallery{
+        // grid-template-columns: repeat(auto-fill, minmax(650px, 1fr)) !important;  /* مهم مهم مهم  */
+        height: 400px;
+        .child-gallery{
+            cursor: pointer;
+            flex: 1;
+            border-radius: 15px;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            filter: blur(2px);
+            transition: all .5s linear !important;
+            box-shadow: 0 0 3px 0px #cccccc !important;
+            &:hover{
+                transition: all .5s linear !important;
+                flex: 5;
+                filter: blur(0px);
+                @include mobileScreen{
+                    flex: 10 !important; 
+                }
+            }
+            img{
+                border-radius: 15px;
+            }
+        }
+    }
+}
+// End gallery
+
+@keyframes white-circle {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        background-color: var(--bg-white);
+    }
+}

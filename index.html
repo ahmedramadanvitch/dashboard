@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash-board</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrab CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- icon CDN bootstrab -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- aos.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <!-- start pre-loader -->
+  <div id="pre-loader" style="background-image: url(imgs/pre-loading-2.gif);"></div>
+  <!-- end pre-loader -->
+
+  <!-- start scroll progress -->
+  <div id="progress">
+    <span id="progress-value"></span>
+  </div>
+  <!-- End scroll progress -->
+
+  <!-- start dark mood -->
+  <i class="bi bi-brightness-high-fill" id="toggle-mood"></i>
+  <!-- End dark mood -->
+
+  <!-- start btn scroll to top -->
+  <a class="btn-up">
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/qsacmnwj.json"
+        trigger="loop"
+        delay="1000"
+        style="width:50px;height:50px">
+    </lord-icon>
+  </a>
+  <!-- End btn scroll to top -->
+  
+  <!-- start main page flex -->
+  
+  <div class="page d-flex">
+    
+    <!-- start side bar -->
+    
+    <div class="side-bar pt-3">
+      <h5 class="text-center" data-text="Ahmed"></h5>
+      <hr>
+      <ul class="links d-flex flex-column justify-content-center align-items-center">
+          
+          <li class="active">
+              <a href="index.html" class=" p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-regular fa-chart-bar fa-fw"></i>
+                  <span class="ps-3">Dashboard</span>
+              </a>
+          </li>
+
+          <li class="">
+              <a href="setting.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-solid fa-gear fa-fw"></i>
+                  <span class="ps-3">Settings</span>
+              </a>
+          </li>
+          
+          <li class="">
+              <a href="profile.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-regular fa-user fa-fw"></i>
+                  <span class="ps-3">Profile</span>
+              </a> 
+          </li>
+          
+          
+          <li class="">
+              <a href="projects.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-solid fa-diagram-project fa-fw"></i>
+                  <span class="ps-3">Projects</span>
+              </a>
+          </li>
+          
+          <li class="">
+              <a href="courses.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                  <span class="ps-3">Courses</span>
+              </a>
+          </li>
+          
+          <li class="">
+              <a href="friends.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-regular fa-circle-user fa-fw"></i>
+                  <span class="ps-3">Friends</span>
+              </a>
+          </li>
+          
+          <li class="">
+              <a href="files.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-regular fa-file fa-fw"></i>
+                  <span class="ps-3">Files</span>
+              </a>
+          </li>
+
+          <li class="">
+              <a href="plans.html" class="p-2 d-flex justify-content-start align-items-center">
+                  <i class="fa-regular fa-credit-card fa-fw"></i>
+                  <span class="ps-3">Plans</span>
+              </a>
+          </li>
+
+      </ul>
+      <!-- <div class="dark-mode">
+          <i class="bi bi-brightness-high-fill" id="toggle-mood"></i>
+          <span>Change Mode</span>
+      </div> -->
+    </div>
+    
+    <!-- end side bar -->
+
+    <!-- start content -->
+
+    <div class="content">
+
+      <!-- start main header ----- search && small img   -->
+      <div class="main-header">
+        <div class="container">
+
+          <div class="row px-4 position-absolute justify-content-between justify-content-md-between align-items-center">
+      
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 search-box">
+
+              <input type="text" placeholder="Search here..." />
+
+              <div class="search-icon">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/hgbzryoa.json"
+                      trigger="loop"
+                      delay="1500"
+                      colors="primary:#794628,secondary:#4bb3fd,tertiary:#b26836"
+                      style="width:40px;height:40px">
+                  </lord-icon>
+              </div>
+
+              <div class="cancel-icon">
+                <i class="fas fa-times"></i>
+              </div>
+            
+            </div>
+      
+            <div class="col-3 col-sm-3 col-md-2 col-lg-1 icon-img">
+              <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/zthozvfn.json"
+                  trigger="loop"
+                  delay="1000"
+                  colors="primary:#b26836,secondary:#0075ff,tertiary:#f9c9c0,quaternary:#ebe6ef"
+                  state="hover-wave"
+                  style="width:75px;height:fit-content">
+              </lord-icon>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </div>
+      <!-- end main header ----- search && small img   -->
+
+      <!-- start text head -->
+      <div class="container heading py-3">
+
+        <h2 class="fw-bold ps-1" data-header="Dashboard"></h2>
+        <hr class="heading-hr ps-1">
+
+      </div>
+      <!-- end text head -->
+
+      <!-- start dashboard boxes (grid-system by css) -->
+      <div class="container py-3 px-4 overflow-hidden dashboard">
+
+        <!-- start welcome box -->
+        <div class="welcome box d-flex flex-column overflow-hidden" style="padding: 0 !important;">
+      
+          <div class="welcome-head p-3 position-relative d-flex justify-content-between align-items-start">
+            
+            <div class="text">
+              <h3 class="fw-bold">welcome</h3>
+              <span class="text-secondary">Elzero</span>
+            </div>
+            
+            <div class="img position-relative d-none d-md-block ">
+              <img src="imgs/welcome.png" alt="">
+            </div>
+          </div>
+
+          <div class="welcome-info mt-4 py-5 d-flex flex-column flex-sm-row justify-content-evenly align-items-center">
+            
+            <div class="text-center mb-3 mb-sm-0">
+              <p class="fw-500 mb-1 mb-sm-3">Ahmed ramadan</p>
+              <span class="text-secondary">Developer</span>
+            </div>
+            <div class="text-center mb-3 mb-sm-0">
+              <p class="fw-500 mb-1 mb-sm-3">20</p>
+              <span class="text-secondary">Projects</span>
+            </div>
+            <div class="text-center mb-3 mb-sm-0">
+              <p class="fw-500 mb-1 mb-sm-3">$5000</p>
+              <span class="text-secondary">Earned</span>
+            </div>
+            
+          </div>
+          
+          <div class="welcome-foot my-4 ps-4">
+            <a href="">
+              <button class="main-btn">
+                profile
+              </button>
+            </a>
+          </div>
+
+        </div>
+        <!-- End welcome box -->
+          
+        <!-- start draft box -->
+        <div class="draft box d-flex flex-column">
+    
+          <h3 class="fw-bold">Quick Draft</h3>
+          <span class="text-secondary">Write A Draft For Your Ideas</span>
+          
+          <form class="mt-3">
+            <input type="text" class="d-block w-100 my-2 px-2 py-1" placeholder="Title" maxlength="20">
+            <!-- span use in js file -->
+            <span class="progress-input-draft"></span>
+            <span class="count-input-character"></span>
+            <textarea class="d-block w-100 mt-3 p-2 pb-5" placeholder="Your Thought" cols="30" rows="6"></textarea>
+            <input type="submit" value="save" class="main-btn mt-3">
+
+          </form>
+        
+        </div>
+        <!-- End draft box -->
+
+        <!-- start target -->
+        <div class="target box">
+    
+          <h3 class="fw-bold">Yearly Targets</h3>
+          <span class="text-secondary my-0 py-0">Targets Of The Year</span>
+
+          <div class="d-flex flex-column gap-3 gap-lg-4">
+
+            <div class="icon-prog mt-3 d-flex justify-content-center align-items-center gap-3">
+            
+              <div class="icon money">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qmcsqnle.json"
+                    trigger="loop"
+                    delay="100"
+                    style="width:150px;height:150px">
+                </lord-icon>
+              </div>
+            
+              <div class="prog d-flex flex-column pe-2">
+                <span class="mb-1 text-secondary">money</span>
+                <span class="mb-1 fw-bold">$20.000</span>
+
+                <div class="progress">
+                  <div class="progress-bar bg-warning" data-width="55%" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="icon-prog mt-3 d-flex justify-content-center align-items-center gap-3">
+              
+              <div class="icon projects">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/dplflkuw.json"
+                    trigger="loop"
+                    delay="100"
+                    colors="primary:#0d6efd"
+                    style="width:150px;height:150px">
+                </lord-icon>
+              </div>
+            
+              <div class="prog d-flex flex-column pe-2">
+                <span class="mb-1 text-secondary">projects</span>
+                <span class="mb-1 fw-bold">20</span>
+
+                <div class="progress">
+                  <div class="progress-bar bg-primary" data-width="75%" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            
+            </div>
+            
+            <div class="icon-prog mt-3 d-flex justify-content-center align-items-center gap-3">
+              
+              <div class="icon team">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/jnlncdtk.json"
+                    trigger="loop"
+                    delay="100"
+                    colors="primary:#198754,secondary:#ad6836,tertiary:#4faef9,quaternary:#f3c3ba,quinary:#e7e2eb"
+                    style="width:150px;height:150px">
+                </lord-icon>
+              </div>
+            
+              <div class="prog d-flex flex-column pe-2">
+                <span class="mb-1 text-secondary">Team</span>
+                <span class="mb-1 fw-bold">8</span>
+
+                <div class="progress">
+                  <div class="progress-bar bg-success" data-width="98%" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End target -->
+          
+        <!-- start ticket -->
+        <div class="ticket box">
+    
+          <h3 class="fw-bold">Tickets Statistics</h3>
+          <span class="text-secondary ps-1">Everything About Support Tickets</span>
+
+          <div class="container px-3 mt-3">
+            <div class="row">
+              
+              <div class="card py-3 align-items-center gap-4">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/ckatldkn.json"
+                    trigger="loop"
+                    delay="1000"
+                    colors="primary:#646e78,secondary:#08a88a,tertiary:#ebe6ef"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p class="number-ticket mb-0 fs-5 fw-bold" data-number="100">0</p>
+                <span class="text-secondary">Total</span>
+              </div>
+
+              <div class="card py-3 align-items-center gap-4">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/avytqtql.json"
+                    trigger="loop"
+                    delay="1000"
+                    colors="primary:#ffffff,secondary:#16a9c7"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p class="number-ticket mb-0 fs-5 fw-bold" data-number="120">0</p>
+                <span class="text-secondary">Pending</span>
+              </div>
+
+              <div class="card py-3 align-items-center gap-4">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/hrqqslfe.json"
+                    trigger="loop"
+                    delay="1000"
+                    colors="primary:#ffffff,secondary:#16a9c7"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p class="number-ticket mb-0 fs-5 fw-bold" data-number="300">0</p>
+                <span class="text-secondary">Closed</span>
+              </div>
+
+              <div class="card py-3 align-items-center gap-4">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/inrunzby.json"
+                    trigger="loop"
+                    delay="1000"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p class="number-ticket mb-0 fs-5 fw-bold" data-number="200">0</p>
+                <span class="text-secondary">Deleted</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- End ticket -->
+
+        <!-- start latest-news -->
+        <div class="latest-news box">
+    
+          <h3 class="fw-bold mb-4 text-center text-sm-start">Latest News</h3>
+
+          <div class="d-flex flex-column gap-3 gap-lg-4">
+
+            <div class="news-row d-flex flex-column flex-sm-row text-center text-sm-start justify-content-between align-items-center">
+            
+              <div class="image-news col-6 col-sm-2">
+                <img src="imgs/news-01.png" class="img-fluid rounded-3" alt="">
+              </div>
+              
+              <div class="text-news col-12 col-sm-7 px-3 py-2 py-sm-0">
+                <p class="mb-1 fw-bold">Created SASS Section</p>
+                <span class="mb-0 text-secondary">New SASS Examples & Tutorials</span>
+              </div>
+
+              <div class="day-news col-12 col-sm-3 px-2 text-center">
+                <span class="p-2 rounded-3 bg-light">3 Days Ago</span>
+              </div>
+
+            </div>
+
+            <div class="news-row d-flex flex-column flex-sm-row text-center text-sm-start justify-content-between align-items-center">
+              
+              <div class="image-news col-6 col-sm-2">
+                <img src="imgs/news-02.png" class="img-fluid rounded-3" alt="">
+              </div>
+
+              <div class="text-news col-12 col-sm-7 px-3 py-2 py-sm-0">
+                <p class="mb-1 fw-bold">Changed The Design</p>
+                <span class="mb-0 text-secondary">A Brand New Website Design</span>
+              </div>
+
+              <div class="day-news col-12 col-sm-3 px-2 text-center">
+                <span class="p-2 rounded-3 bg-light">4 Days Ago</span>
+              </div>
+
+            </div>
+
+            <div class="news-row d-flex flex-column flex-sm-row text-center text-sm-start justify-content-between align-items-center">
+              
+              <div class="image-news col-6 col-sm-2">
+                <img src="imgs/news-03.png" class="img-fluid rounded-3" alt="">
+              </div>
+              
+              <div class="text-news col-12 col-sm-7 px-3 py-2 py-sm-0">
+                <p class="mb-1 fw-bold">Team Increased</p>
+                <span class="mb-0 text-secondary">3 Developers Joined The Team</span>
+              </div>
+
+              <div class="day-news col-12 col-sm-3 px-2 text-center">
+                <span class="p-2 rounded-3 bg-light">6 Days Ago</span>
+              </div>
+
+            </div>
+
+            <div class="news-row d-flex flex-column flex-sm-row text-center text-sm-start justify-content-between align-items-center">
+              
+              <div class="image-news col-6 col-sm-2">
+                <img src="imgs/news-04.png" class="img-fluid rounded-3" alt="">
+              </div>
+              
+              <div class="text-news col-12 col-sm-7 px-3 py-2 py-sm-0">
+                <p class="mb-1 fw-bold">Added Payment Gateway</p>
+                <span class="mb-0 text-secondary">Many New Payment Gateways Added</span>
+              </div>
+
+              <div class="day-news col-12 col-sm-3 px-2 text-center">
+                <span class="p-2 rounded-3 bg-light">8 Days Ago</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End news -->
+
+        <!-- start Latest Tasks -->
+        <div class="latest-tasks box d-flex flex-column">
+
+          <h3 class="fw-bold mb-4">Latest Tasks</h3>
+
+          <div class="d-flex flex-column gap-3">
+
+            <div class="tasks-row  d-flex align-items-start">
+              <div class="text-tasks col-11">
+                <p class="mb-1 fw-bold">Record One New Video</p>
+                <span class="mb-1 pb-1 text-secondary">Record Python Create Exe Project</span>
+              </div>
+              <div class="icon-tasks col-1">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qjwkduhc.json"
+                    trigger="loop"
+                    delay="500"
+                    colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef"
+                    state="hover-empty"
+                    style="width:30px;height:fit-content">
+                </lord-icon>
+              </div>
+            </div>
+            <div class="tasks-row  d-flex align-items-start">
+              <div class="text-tasks col-11">
+                <p class="mb-1 fw-bold">Write Article</p>
+                <span class="mb-1 pb-1 text-secondary">Write Low Level vs High Level Languages</span>
+              </div>
+              <div class="icon-tasks col-1">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qjwkduhc.json"
+                    trigger="loop"
+                    delay="500"
+                    colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef"
+                    state="hover-empty"
+                    style="width:30px;height:fit-content">
+                </lord-icon>
+              </div>
+            </div>
+            <div class="tasks-row  d-flex align-items-start">
+              <div class="text-tasks col-11">
+                <p class="mb-1 fw-bold">Finish Project</p>
+                <span class="mb-1 pb-1 text-secondary">Finish Project</span>
+              </div>
+              <div class="icon-tasks col-1">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qjwkduhc.json"
+                    trigger="loop"
+                    delay="500"
+                    colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef"
+                    state="hover-empty"
+                    style="width:30px;height:fit-content">
+                </lord-icon>
+              </div>
+            </div>
+            <div class="tasks-row  d-flex align-items-start">
+              <div class="text-tasks col-11">
+                <p class="mb-1 fw-bold text-secondary text-decoration-line-through">Attend The Meeting</p>
+                <span class="mb-1 pb-1 text-secondary text-decoration-line-through">Attend The Project Business Analysis Meeting</span>
+              </div>
+              <div class="icon-tasks col-1">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qjwkduhc.json"
+                    trigger="loop"
+                    delay="500"
+                    colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef"
+                    state="hover-empty"
+                    style="width:30px;height:fit-content">
+                </lord-icon>
+              </div>
+            </div>
+            <div class="tasks-row  d-flex align-items-start">
+              <div class="text-tasks col-11">
+                <p class="mb-1 fw-bold">Finish Lesson</p>
+                <span class="mb-1 pb-1 text-secondary">Finish Teaching Flex Box</span>
+              </div>
+              <div class="icon-tasks col-1">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qjwkduhc.json"
+                    trigger="loop"
+                    delay="500"
+                    colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef"
+                    state="hover-empty"
+                    style="width:30px;height:fit-content">
+                </lord-icon>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End Latest Tasks -->
+
+        <!-- start top search -->
+        <div class="top-search box d-flex flex-column">
+    
+          <h3 class="fw-bold mb-4">Top Search Items</h3>
+
+          <div class="d-flex flex-column gap-2">
+
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p class="text-secondary">Keyword</p>
+              <p class="text-secondary">Search Count</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>Programming</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="220">0</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>JavaScript</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="10">0</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>PHP</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="120">0</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>Code</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="300">0</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>Design</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="20">0</p>
+            </div>
+            <div class="top-row px-2 d-flex justify-content-between align-items-center">    
+              <p>Logic</p>
+              <p class="px-2 py-1 num-top rounded-3" data-top="80">0</p>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End top search -->
+
+        <!-- start Latest Uploads -->
+        <div class="uploads box d-flex flex-column">
+      
+            <h3 class="fw-bold mb-4">Latest Uploads</h3>
+  
+            <div class="d-flex flex-column gap-2">
+
+              <div class="uploads-row pb-2 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/usfiugih.json"
+                      trigger="loop"
+                      delay="1000"
+                      style="width:50px;height:50px">
+                  </lord-icon>
+                  <div>
+                    <p class="mb-0">my-file.pdf</p>  
+                    <span class="mb-0 text-secondary">Elzero</span>  
+                  </div>
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+              <div class="uploads-row pb-2 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/ckatldkn.json"
+                      trigger="loop"
+                      delay="500"
+                      style="width:50px;height:50px">
+                  </lord-icon>
+                  <div>
+                    <p class="mb-0">my-file.pdf</p>  
+                    <span class="mb-0 text-secondary">Elzero</span>  
+                  </div>
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+              <div class="uploads-row pb-2 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <div class="img-upload d-flex align-items-center gap-2">
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/usfiugih.json"
+                        trigger="loop"
+                        delay="1500"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                    <div>
+                      <p class="mb-0">my-file.pdf</p>  
+                      <span class="mb-0 text-secondary">Elzero</span>  
+                    </div>
+                  </div>
+
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+              <div class="uploads-row pb-2 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/ckatldkn.json"
+                      trigger="loop"
+                      delay="500"
+                      style="width:50px;height:50px">
+                  </lord-icon>
+                  <div>
+                    <p class="mb-0">my-file.pdf</p>  
+                    <span class="mb-0 text-secondary">Elzero</span>  
+                  </div>
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+              <div class="uploads-row pb-2 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <div class="img-upload d-flex align-items-center gap-2">
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/usfiugih.json"
+                        trigger="loop"
+                        delay="500"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                    <div>
+                      <p class="mb-0">my-file.pdf</p>  
+                      <span class="mb-0 text-secondary">Elzero</span>  
+                    </div>
+                  </div>
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+              <div class="uploads-row pb-3 d-flex justify-content-between align-items-center">    
+                <div class="img-upload d-flex align-items-center gap-2">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/usfiugih.json"
+                      trigger="loop"
+                      delay="2000"
+                      style="width:50px;height:50px">
+                  </lord-icon>
+                  <div>
+                    <p class="mb-0">my-file.pdf</p>  
+                    <span class="mb-0 text-secondary">Elzero</span>  
+                  </div>
+                </div>
+                <p class="px-2 py-1 bg-light rounded-3">2.9mp</p> 
+              </div>
+
+
+            </div>
+
+        </div>
+        <!-- End Latest Uploads -->
+
+        <!-- start Last Project -->
+        <div class="last-project box position-relative">
+    
+          <h3 class="fw-bold mb-4">Last Project Progress</h3>
+
+          <div class="big-circle-div d-flex flex-column flex-md-row align-items-center gap-3">
+
+            <div class="steps">
+              <div class="circ-text">
+                <span class="circle active">1</span>
+                <p class="text mb-0">Got The Project</p>
+              </div>
+              <div class="circ-text">
+                <span class="circle">2</span>
+                <p class="text mb-0">Started The Project</p>
+              </div>
+              <div class="circ-text">
+                <span class="circle">3</span>
+                <p class="text mb-0">The Project About To Finish</p>
+              </div>
+              <div class="circ-text">
+                <span class="circle">4</span>
+                <p class="text mb-0">Test The Project</p>
+              </div>
+              <div class="circ-text">
+                <span class="circle">5</span>
+                <p class="text mb-0">Finish The Project & Get Money</p>
+              </div>
+      
+              <div class="progress-bar-stp">
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="button">
+              <button id="prev">
+                <i class="fa-solid fa-circle-arrow-up" id="prev"></i>
+              </button>
+              <button id="next">
+                <i class="fa-solid fa-circle-arrow-down" id="next"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <img src="imgs/project.png" class="position-absolute d-none d-sm-block" alt="">
+
+        </div>
+        <!-- End Last Project -->
+
+        <!-- start Reminders -->
+        <div class="reminders box position-relative">
+        
+              <h3 class="fw-bold mb-4">Reminders</h3>
+    
+              <div class="reminders-row d-flex flex-column gap-4">
+
+                <div class="blue">
+                  <p class="mb-1 fw-bold">Check My Tasks List</p>
+                  <p class="mb-0 text-secondary">28/09/2022 - 12:00am</p>
+                </div>
+                <div class="orange">
+                  <p class="mb-1 fw-bold">Check My Projects</p>
+                  <p class="mb-0 text-secondary">26/10/2022 - 12:00am</p>
+                </div>
+                <div class="green">
+                  <p class="mb-1 fw-bold">Call All My Clients</p>
+                  <p class="mb-0 text-secondary">05/11/2022 - 12:00am</p>
+                </div>
+                <div class="red">
+                  <p class="mb-1 fw-bold">Check My Tasks List</p>
+                  <p class="mb-0 text-secondary">28/09/2022 - 12:00am</p>
+                </div>
+                <div class="blue">
+                  <p class="mb-1 fw-bold">Finish The Development Workshop</p>
+                  <p class="mb-0 text-secondary">20/12/2022 - 12:00am</p>
+                </div>
+
+              </div>
+
+        </div>
+        <!-- End Reminders -->
+
+        <!-- start Latest Post -->
+        <div class="latest-post box position-relative">
+    
+          <h3 class="fw-bold mb-4">Latest Post</h3>
+
+          <div class="post-img py-3 mb-3 d-flex align-items-center gap-3">
+            <img src="imgs/avatar.png" class="img-fluid" style="width: 50px; height: 50px;" alt="">
+            <div>
+              <p class="fw-bold mb-1">Ahmed Vitch</p>
+              <p class="text-secondary mb-0">About 3 Hours Ago</p>
+            </div>
+          </div>
+
+          <div class="post-text py-3 py-sm-5 px-1">
+            <p class="mb-0">You Can Fool All Of The People Some Of The Time, And Some Of The People All Of The Time, But You Can't Fool All Of The People All Of The Time.</p>
+          </div>
+          
+          <div class="post-icon pt-4 d-flex justify-content-between align-items-center">
+            <div class="icon-heart">
+              <i class="fa-regular fa-heart fs-4 text-secondary"></i>
+              <span class="text-secondary fs-4">500</span>
+            </div>
+            <div class="icon-chat">
+              <i class="fa-regular fa-comments fs-4 text-secondary"></i>
+              <span class="text-secondary fs-4">500</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Latest Post -->
+
+        <!-- start Social Media Stats -->
+        <div class="social box d-flex flex-column">
+    
+          <h3 class="fw-bold mb-4">Social Media Stats</h3>
+
+          <div class="d-flex flex-column gap-4 mt-4">
+
+            <div class="twitter pe-3 d-flex justify-content-between align-items-center">
+
+              <div class="icon d-flex justify-content-center align-items-center gap-4">
+                <i class="fa-brands fa-twitter fa-2x bg-primary text-white d-flex justify-content-center align-items-center"></i>
+                <span class="text-primary lead">90k Followers</span>
+              </div>
+              
+              <a href="###" class="bg-primary py-1 px-3 text-white rounded-3 fw-bold">Follow</a>
+            </div>
+            <div class="face-book pe-3 d-flex justify-content-between align-items-center">
+
+              <div class="icon d-flex justify-content-center align-items-center gap-4">
+                <i class="fa-brands fa-facebook-f fa-2x bg-primary text-white d-flex justify-content-center align-items-center"></i>
+                <span class="text-primary lead">2M Like</span>
+              </div>
+              
+              <a href="###" class="bg-primary py-1 px-3 text-white rounded-3 fw-bold">Like</a>
+            </div>
+            <div class="youtube pe-3 d-flex justify-content-between align-items-center">
+
+              <div class="icon d-flex justify-content-center align-items-center gap-4">
+                <i class="fa-brands fa-youtube fa-2x bg-danger text-white d-flex justify-content-center align-items-center"></i>
+                <span class="text-danger lead">1M Subs</span>
+              </div>
+              
+              <a href="###" class="bg-danger py-1 px-3 text-white rounded-3 fw-bold">Subscribe</a>
+            </div>
+            <div class="linked-in pe-3 d-flex justify-content-between align-items-center">
+
+              <div class="icon d-flex justify-content-center align-items-center gap-4">
+                <i class="fa-brands fa-linkedin fa-2x bg-primary text-white d-flex justify-content-center align-items-center"></i>
+                <span class="text-primary lead">10k Followers</span>
+              </div>
+              
+              <a href="###" class="bg-primary py-1 px-3 text-white rounded-3 fw-bold">Follow</a>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End Social Media Stats -->
+        
+      </div>
+      <!-- End dashboard boxes (grid-system by css) -->
+
+      <!-- start gallery-images -->
+      <div class="gallery-images my-3 mx-4 box d-flex flex-column">
+
+        <h3 class="fw-bold mb-1">Gallery</h3>
+        <span class="text-secondary mb-3">Some Photos</span>
+
+        <div class="gallery d-flex flex-column flex-md-row gap-3">
+          <div class="child-gallery" style="background-image: url(imgs/course-01.jpg);"></div>
+          <div class="child-gallery" style="background-image: url(imgs/course-02.jpg);"></div>
+          <div class="child-gallery" style="background-image: url(imgs/course-03.jpg);"></div>
+          <div class="child-gallery" style="background-image: url(imgs/friend-02.jpg);"></div>
+          <div class="child-gallery" style="background-image: url(imgs/course-04.jpg);"></div>
+          <div class="child-gallery" style="background-image: url(imgs/course-05.jpg);"></div>
+        </div>
+
+      </div>
+      <!-- End gallery-images -->
+
+      <!-- start Footer -->
+      <div class="footer my-2 mx-4 box d-flex justify-content-between align-items-center">
+
+        <p class="created text-center fw-bold mb-0">
+          Created By <br>
+          <i class="fa-solid fa-heart"></i> 
+          AHMED RAMADAN
+          <i class="fa-solid fa-heart"></i> 
+        </p>
+
+        <p class="created text-center fw-bold mb-0">
+          Thank You My Teacher <br>
+          <i class="fa-solid fa-heart"></i> 
+          Osama Elzero
+          <i class="fa-solid fa-heart"></i> 
+        </p>
+
+
+      </div>
+      <!-- End Footer -->
+
+    </div>
+    
+    <!-- End content -->
+  </div>
+  
+  <!-- end main page flex -->
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

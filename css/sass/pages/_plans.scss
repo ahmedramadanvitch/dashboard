@@ -1,0 +1,60 @@
+.plans{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(450px,1fr) );
+    gap: 20px;
+    @include mobileScreen{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* مهم مهم مهم  */
+        gap: 30px;
+    }
+    & > div{
+        background-color: var(--bg-white);
+        padding: 15px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 5px 2px #cccccc !important;
+        .title{
+            color: var(--text-white) !important;
+            border: 3px solid var(--bg-white);
+            padding: 20px;
+            border-radius: 15px;
+            h4{
+                font-size: 26px;
+            }
+            span.price{
+                font-size: 42px;
+            }
+        }
+        ul{
+            li{
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--bg-color);
+                }
+                span{
+                    color: var(--text-black);
+                    font-size: 15px;
+                    @include mobileScreen{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .free{
+        .title.green{
+            background-color: var(--green-color);
+            outline: 3px solid var(--green-color);
+        }
+    }
+    .basic{
+        .title.blue{
+            background-color: var(--blue-alt-color);
+            outline: 3px solid var(--blue-alt-color);
+        }
+    }
+    .premium{
+        .title.orange{
+            background-color: var(--orange-color);
+            outline: 3px solid var(--orange-color);
+        }
+    }
+}

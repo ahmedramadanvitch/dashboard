@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrab -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- icon CDN bootstrab -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- aos.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+    <!-- start pre-loader -->
+    <div id="pre-loader" style="background-image: url(imgs/pre-loading-2.gif);"></div>
+    <!-- end pre-loader -->
+
+    <!-- start scroll progress -->
+    <div id="progress">
+        <span id="progress-value"></span>
+    </div>
+    <!-- End scroll progress -->
+
+    <!-- start dark mood -->
+    <i class="bi bi-brightness-high-fill" id="toggle-mood"></i>
+    <!-- End dark mood -->
+
+    <!-- start btn scroll to top -->
+    <a class="btn-up">
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/qsacmnwj.json"
+        trigger="loop"
+        delay="1000"
+        style="width:50px;height:50px">
+    </lord-icon>
+    </a>
+    <!-- End btn scroll to top -->
+
+    <!-- start main page flex -->
+
+    <div class="page d-flex">
+        
+        <!-- start side bar -->
+        <div class="side-bar pt-3">
+            <h5 class="text-center" data-text="Ahmed"></h5>
+            <hr>
+            <ul class="links d-flex flex-column justify-content-center align-items-center">
+                
+                <li class="">
+                    <a href="index.html" class=" p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span class="ps-3">Dashboard</span>
+                    </a>
+                </li>
+    
+                <li class="active">
+                    <a href="setting.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span class="ps-3">Settings</span>
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a href="profile.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span class="ps-3">Profile</span>
+                    </a> 
+                </li>
+                
+                
+                <li class="">
+                    <a href="projects.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span class="ps-3">Projects</span>
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a href="courses.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span class="ps-3">Courses</span>
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a href="friends.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span class="ps-3">Friends</span>
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a href="files.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span class="ps-3">Files</span>
+                    </a>
+                </li>
+    
+                <li class="">
+                    <a href="plans.html" class="p-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-regular fa-credit-card fa-fw"></i>
+                        <span class="ps-3">Plans</span>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+        <!-- end side bar -->
+        
+        <!-- start content -->
+        <div class="content">
+
+            <!-- start main header ----- search && small img   -->
+            <div class="main-header">
+                <div class="container">
+        
+                  <div class="row px-4 position-absolute justify-content-between justify-content-md-between align-items-center">
+              
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 search-box">
+        
+                      <input type="text" placeholder="Search here..." />
+        
+                      <div class="search-icon">
+                          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/hgbzryoa.json"
+                              trigger="loop"
+                              delay="1500"
+                              colors="primary:#794628,secondary:#4bb3fd,tertiary:#b26836"
+                              style="width:40px;height:40px">
+                          </lord-icon>
+                      </div>
+        
+                      <div class="cancel-icon">
+                        <i class="fas fa-times"></i>
+                      </div>
+                    
+                    </div>
+              
+                    <div class="col-3 col-sm-3 col-md-2 col-lg-1 icon-img">
+                      <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                      <lord-icon
+                          src="https://cdn.lordicon.com/zthozvfn.json"
+                          trigger="loop"
+                          delay="1000"
+                          colors="primary:#b26836,secondary:#0075ff,tertiary:#f9c9c0,quaternary:#ebe6ef"
+                          state="hover-wave"
+                          style="width:75px;height:fit-content">
+                      </lord-icon>
+                    </div>
+              
+                  </div>
+              
+                </div>
+              
+            </div>
+            <!-- end main header ----- search && small img   -->
+
+            <!-- start text head -->
+            <div class="container heading py-3">
+
+                <h2 class="fw-bold ps-1" data-header="Settings"></h2>
+                <hr class="heading-hr ps-1">
+
+            </div>
+            <!-- end text head -->
+
+            <!-- start setting boxes (grid-system by normal css) -->
+            <div class="container px-4 py-4 overflow-hidden setting">
+
+                <!-- start site control box -->
+                <div class="site-control box">
+                    
+                    <h3 class="fw-bold">Site Control</h3>
+                    <span class="text-secondary">Control The Website If There Is Maintenance</span>
+                
+                    <div class="my-3 d-flex justify-content-between align-items-center">
+                        <div class="text">
+                            <p class="mb-0 fw-500">Website Control</p>
+                            <span class="text-secondary">Open/Close Website And Type The Reason</span>
+                        </div>
+                        <div class="icons-checkbox">
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked />
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea class="mt-2 p-1 rounded-3 textarea-site" placeholder="Close Message Content" rows="6"></textarea>
+                </div>
+                <!-- End site control box -->
+
+                <!-- start site control box -->
+                <div class="general-info box">
+                    
+                    <h3 class="fw-bold">General Info</h3>
+                    <span class="text-secondary">General Information About Your Account</span>
+                
+                    <form class="mt-2">
+                        <label class="d-flex flex-column">
+                            <span class="mb-1 text-secondary">First Name</span>
+                            <input type="text" class="" placeholder="First Name">
+                        </label>
+                        
+                        <label class="d-flex flex-column mt-3">
+                            <span class="mb-1 text-secondary">Last Name</span>
+                            <input type="text" class="" placeholder="Last Name">
+                        </label>
+                        
+                        <label class="mt-3 w-100">
+                            <span class="mb-1 d-block text-secondary">Email</span>
+                            <div class="d-flex justify-content-between">
+                                <input type="email" class="" placeholder="ahmed@gmail.com" disabled>
+                                <input type="submit" value="Change">    
+                            </div>
+                        </label>
+                    </form>
+
+                </div>
+                <!-- End site control box -->
+                
+                <!-- start security-info box -->
+                <div class="security-info box">
+                                    
+                    <h3 class="fw-bold">Security Info</h3>
+                    <span class="text-secondary">Security Information About Your Account</span>
+                
+                    <div class="security-row pb-3 mt-4 mb-4 d-flex justify-content-between align-items-center">
+                        <div class="text">
+                            <p class="mb-0">Password</p>
+                            <span class="text-secondary">Last Change On 25/10/2021</span>
+                        </div>
+                        <button class="main-btn">
+                            <a href="###" >Change</a>
+                        </button>
+                    </div>
+                    <div class="security-row pb-3 mt-3 mb-4 d-flex justify-content-between align-items-center">
+                        <div class="text">
+                            <p class="mb-0">Two-Factor Authentication</p>
+                            <span class="text-secondary">Enable/Disable The Feature</span>
+                        </div>
+                        <div class="icons-checkbox">
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked />
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="security-row pb-3 mt-3 mb-3 d-flex justify-content-between align-items-center">
+                        <div class="text">
+                            <p class="mb-0">Devices</p>
+                            <span class="text-secondary">Check The Login Devices List</span>
+                        </div>
+                        <a href="###" class="devices">Devices</a>
+                    </div>
+
+                </div>
+                <!-- End security-info box -->
+
+                <!-- start Social-info box -->
+                <div class="social-info box">
+                        
+                    <h3 class="fw-bold">Social Info</h3>
+                    <span class="text-secondary">Social Media Information</span>
+                
+                    <div class="d-flex flex-column gap-4 mt-3">
+
+                        <div class="social-row d-flex justify-content-between align-items-center">
+                            <div class="icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <input type="text" class="w-100" placeholder="Twitter Username">
+                        </div>
+                        <div class="social-row d-flex justify-content-between align-items-center">
+                            <div class="icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <input type="text" class="w-100" placeholder="Facebook Username">
+                        </div>
+                        <div class="social-row d-flex justify-content-between align-items-center">
+                            <div class="icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <input type="text" class="w-100" placeholder="Linkedin Username">
+                        </div>
+                        <div class="social-row d-flex justify-content-between align-items-center">
+                            <div class="icon">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <input type="text" class="w-100" placeholder="Youtube Username">
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Social-info box -->
+
+                <!-- start Widgets-Control box -->
+                <div class="widgets-control box">
+            
+                    <h3 class="fw-bold">Widgets Control</h3>
+                    <span class="text-secondary">Show/Hide Widgets</span>
+                
+                    <div class="d-flex flex-column gap-3 mt-3">
+
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check">
+                                <p class="mb-0">Quick Draft</p>
+                            </label>
+
+                        </div>
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check-2" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check-2">
+                                <p class="mb-0">Yearly Targets</p>
+                            </label>
+
+                        </div>
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check-3" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check-3">
+                                <p class="mb-0">Tickets Statistics</p>
+                            </label>
+
+                        </div>
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check-4" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check-4">
+                                <p class="mb-0">Latest News</p>
+                            </label>
+
+                        </div>
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check-5" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check-5">
+                                <p class="mb-0">Latest Tasks</p>
+                            </label>
+
+                        </div>
+                        <div class="widgets-row d-flex justify-content-between align-items-center">
+
+                            <label for="check-6" class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="" id="check-6">
+                                <p class="mb-0">Top Search Items</p>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Widgets-Control box -->
+
+                <!-- start Backup Manager -->
+                <div class="backup box">
+                    
+                    <h3 class="fw-bold">Backup Manager</h3>
+                    <span class="text-secondary">Control Backup Time And Location</span>
+
+                    <div class="d-flex flex-column gap-3 mt-3 mb-3">
+
+                        <div class="backup-row d-flex flex-column gap-3">
+
+                            <div class="date d-flex gap-2 align-items-center">
+                                <input type="radio" name="time" id="daily" checked />
+                                <label for="daily">Daily</label>
+                            </div>
+                            <div class="date d-flex gap-2 align-items-center">
+                            <input type="radio" name="time" id="weekly" />
+                            <label for="weekly">Weekly</label>
+                            </div>
+                            <div class="date d-flex gap-2 align-items-center">
+                            <input type="radio" name="time" id="monthly" />
+                            <label for="monthly">Monthly</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                
+                    <div class="container">
+
+                        <div class="icons row mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-0">
+                            
+                            <div class="mega active-backup  col-11 col-md-3 d-flex flex-column justify-content-center align-items-center gap-3">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Megaman</span>
+                            </div>
+
+                            <div class="mega col-11 col-md-3 d-flex flex-column justify-content-center align-items-center gap-3">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Zero</span>
+                            </div>
+
+                            <div class="mega col-11 col-md-3 d-flex flex-column justify-content-center align-items-center gap-3">
+                                <i class="fa-solid fa-server"></i>
+                                <span>Sigma</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Backup Manager -->
+
+            </div>
+            <!-- End setting boxes (grid-system by normal css) -->
+
+            <!-- start Footer -->
+            <div class="footer my-2 mx-4 box d-flex justify-content-between align-items-center">
+
+                <p class="created text-center fw-bold mb-0">
+                    Created By <br>
+                    <i class="fa-solid fa-heart"></i> 
+                    AHMED RAMADAN
+                    <i class="fa-solid fa-heart"></i> 
+                </p>
+    
+                <p class="created text-center fw-bold mb-0">
+                    Thank You My Teacher <br>
+                    <i class="fa-solid fa-heart"></i> 
+                    Osama Elzero
+                    <i class="fa-solid fa-heart"></i> 
+                </p>
+    
+    
+            </div>
+            <!-- End Footer -->
+
+        </div>
+        <!-- End content -->
+
+    </div>
+
+    <!-- end main page flex -->
+
+    <!-- start js -->
+    <script src="js/main.js"></script>
+    <script src="js/setting.js"></script>
+    <!-- End js -->
+</body>
+</html>

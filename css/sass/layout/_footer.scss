@@ -1,0 +1,9 @@
+.footer{
+    @include mobileScreen{
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    i{
+        color: var(--blue-color) !important;
+    }
+}

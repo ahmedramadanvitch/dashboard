@@ -1,0 +1,53 @@
+.courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));  /* مهم مهم مهم  */
+    gap: 30px;
+    @include mobileScreen{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* مهم مهم مهم  */
+        gap: 30px;
+    }
+
+    .card{
+        padding: 0 !important;
+        background-color: var(--bg-white) !important;
+        border: none !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 5px 2px #cccccc !important;
+        overflow: hidden;
+        .card-img-top{
+            box-shadow: 0 0 6px 0 white;
+        }
+        .small-img{
+            width: 60px;
+            height: 60px;
+            border: 2px solid white;
+            top: 15px;
+            left: 15px;
+        }
+        .card-body{
+            h6{
+                color: var(--text-black);
+            }
+            .card-text{
+                font-size: 15px !important;
+            }
+            .course-info{
+                border-top: 2px solid var(--bg-color);
+                div{
+                    &.icon-course{
+                        font-size: 14px !important;
+                    }
+                    i{
+                        color: #0075ff !important;
+                    }
+                    &:nth-of-type(2){
+                        background-color: var(--blue-color) !important;
+                        color: var(--text-white);
+                        top: -25px;
+                    }
+                }
+            }
+        }
+    }
+}

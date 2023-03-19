@@ -1,0 +1,119 @@
+.main-header{
+    height: 67px !important;
+    width: -webkit-fill-available !important;
+    background-color: var(--bg-white);
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px var(--bg-black);
+    z-index: 20;
+    .container{
+        height: 100%;
+        & > div{
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .search-box {
+            position: relative;
+            height: 45px;
+            width: 45px !important;
+            border-radius: 50%;
+            background-color: var(--bg-white);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            &.active {
+                width: 300px !important;
+                padding: 0px;
+                border-radius: 50px;
+                @include mobileScreen{
+                    width: 170px !important;
+                }
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 50px;
+                background: var(--blue-color);
+                color: var(--bg-white);
+                outline: none;
+                padding: 0 60px 0 20px;
+                font-size: 18px;
+                opacity: 0;
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &.active {
+                    opacity: 1;
+                    @include mobileScreen{
+                        font-size: 15px;
+                    }
+                }
+                &::placeholder {
+                    color: var(--bg-white);
+                }
+                &::selection{
+                    color: rgb(255, 217, 0) !important;
+                }
+            }
+            .search-icon {
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 45px;
+                width: 45px;
+                background: var(--bg-white);
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 1;
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &.active {
+                    line-height: 35px;
+                    background: var(--blue-color) !important;
+                    transform: translateY(-49%) rotate(360deg);
+                    @include mobileScreen{
+                        font-size: 15px;
+                        lord-icon{
+                            width: 35px !important;
+                            height: 35px !important;
+                        }
+                    }
+                }
+            }
+            .cancel-icon {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 25px;
+                color: var(--blue-color);
+                cursor: pointer;
+                transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &.active {
+                    right: -30px;
+                    transform: translateY(-50%) rotate(360deg);
+                    z-index: 100;
+                    @include mobileScreen{
+                        font-size: 17px;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+        .icon-img{
+            position: relative;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

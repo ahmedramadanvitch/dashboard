@@ -1,0 +1,61 @@
+.side-bar{
+    box-shadow: 4px 0px 8px -7px var(--text-black);
+    z-index: 25;
+    padding: 15px 0px 15px 5px;
+    max-width: 245px !important;
+    background-color: var(--bg-white);
+    @include mobileScreen{
+        max-width: 58px !important;
+        padding: 15px 8px;
+    }
+    h5{
+        position: relative;
+        color: var(--text-black);
+        @include mobileScreen{
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            margin: 5px auto 25px;
+            position: relative;
+            left: -3px;
+        }
+    }
+    hr{
+        height: 2px !important;
+        width: 90px;
+        margin: 20px auto !important;
+        border: 0;
+        opacity: 1;
+        color: var(--text-black);
+        @include mobileScreen{
+            display: none;
+        }
+    }
+    .links{
+        li{
+            margin-bottom: 8px;
+            a{
+                font-size: 14px !important;
+                width: 200px;
+                border-radius: 8px;
+                color: var(--text-black) !important;
+                &:hover{
+                    background-color:var(--bg-color);
+                }
+                @include mobileScreen {
+                    width: 100% !important;
+                }
+                span{
+                    @include mobileScreen {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .active {
+        background-color: var(--bg-color);
+        border-radius: 8px;
+    }
+}
